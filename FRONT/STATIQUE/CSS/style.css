@@ -1,0 +1,27 @@
+
+ul{margin-bottom: 5px;
+    background-color: black;
+    line-height: 50px;
+}
+
+a{
+    color: white;
+}
+
+#Jardin{
+    text-align: center;
+        font-size: 20px;
+}
+
+hr{
+    color: gainsboro;
+}
+
+.colonne{
+    width: 500px;
+    height: 450px;
+    position: absolute;
+    background-color: gainsboro;
+    left: 75%;
+}
+

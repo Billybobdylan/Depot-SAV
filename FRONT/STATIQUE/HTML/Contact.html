@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<hr>
+<header>
+    <img src="jarditou_logo.jpg" alt="Logo" width="300" height="100"><br>
+</header>
+<nav>
+    <p>La qualité depuis 70 ans</p>
+    <ul>
+    <li><a href="Index.html">Accueil</a><br></li>
+    <li><a href="Tableau.html">Tableau</a><br></li>
+    <li><a href="Contact.html">Contact</a><br></li>
+    </ul>
+</nav>
+<img src="promotion.jpg" alt="promotion">
+<body>
+    <h1>Contact</h1>
+    <p>*Ces zones sont obligatoires</p>
+<br>
+
+<form action="http://bienvu.net/script.php" method="post">
+    <div class="box">
+    <fieldset>
+    <legend>Vos coordonnées</legend>
+    <label for="nom">Votre nom*:</label><input type="text" name="nom"><br>
+
+    <label for="nom">Votre prénom*:</label><input type="text" name="nom"><br>
+
+    <label for="sexe">Sexe* :</label>
+    <input type="radio" name="sexe"  value="F"> Féminin
+    <input type="radio" name="sexe"  value="M"> Masculin
+    <br>
+    <label for="date">Date de naissance* :</label><input type="date" name="ddn"><br>
+    <label for="adresse">Code postal* :</label><input type="text" name="adresse"><br>
+    <label for="adresse">Adresse :</label><input type="text" name="adresse"><br>
+
+    <label for="adresse">Ville :</label><input type="text" name="adresse"><br>
+    <label for="Email">Email* :</label><input type="text" placeholder="dave.loper@afpa.fr" pattern="^[a-z]+$" required title="dave.loper@afpa.fr">
+    </div>
+    </fieldset>
+    <br>
+    <fieldset>
+    <legend>Votre demande</legend> 
+    <label for="sujet">Sujet* :</label>
+    <select id="sujet">
+        <option>Veuillez séléctioner un sujet</option>
+        <option>Mes commandes</option>
+        <option>Question sur un sujet</option>
+        <option>Réclamation</option>
+        <option>Autres</option>
+    
+    </select>
+    <br>
+    <label for="question">Votre question* :</label> <textarea name="question" rows="2"></textarea><br>
+    </fieldset>
+    <input type="checkbox"><label>* J'accepte le traitement informatique de ce formulaire</label><br>
+    <br>
+    <button type="submit">Envoyer</button> <button type="submit">Annuler</button>
+</form>
+<hr>
+    <footer>
+        <ul>
+            <li><a href="ml">Mention légales</a><br></li>
+            <li><a href="Horaire">Horaires</a><br></li>
+            <li><a href="pds">Plan du site</a><br></li>
+            </ul>
+
+    </footer>
+
+</body>

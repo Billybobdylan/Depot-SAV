@@ -1,0 +1,42 @@
+
+@media screen {
+    
+}
+    h1{
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+    p{
+        font-size: 0.8rem;
+    }
+    #Jardin{
+        font-size: 0.9rem;
+    }
+    img{
+        max-width: 100%;
+        height: auto;
+    }
+    .logo{
+        max-width: 20%;
+        height: auto;
+    }
+    .colonne{
+        visibility: hidden;  
+    }
+    ul{
+        font-size: 0.9rem;
+        display: flex;
+        flex-flow: column;
+        line-height: 1.3rem;
+
+        
+    }
+    
+}
+
+
+
+
