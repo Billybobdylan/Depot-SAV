@@ -1,0 +1,28 @@
+<?php
+
+    class Employe
+    {
+        private $nom;
+        private $prenom;
+        private $embauche;
+        private $fonction;
+        private $salaire;
+        private $service;
+        
+
+        public function __construct($nom, $prenom, $embauche, $fonction, $salaire, $service)
+        {
+                $date= new DateTime("now");
+                $this->nom = $nom;
+                $this->prenom = $prenom;
+                $this->embauche = new DateTime($embauche);
+                $this->difference = $date->diff(new DateTime($embauche));
+                $this->fonction = $fonction;
+                $this->salaire = $salaire;
+                $this->service = $service;
+
+// //var_dump($date->format("d/m/Y"));
+// echo($this->difference->format("%y")."ans");
+
+
+        }

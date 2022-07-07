@@ -1,0 +1,99 @@
+php -S 127.0.0.1:8080
+http://127.0.0.1:8080/demo/index.php
+http://127.0.0.1:8080/MVC/index.php
+http://127.0.0.1:8080/POO/classes/test.php
+ <tr>
+                <td class=""><?= $disc->disc_title ?></td>
+                <td class=""> <a class="btn btn-dark btn-sm" href="detail.php?id=<?= $disc->artist_id ?>&&name=<?=$disc->disc_title ?>"  ><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-vinyl-fill" viewBox="0 0 16 16"> 
+                          
+                            
+                        </svg></a> </td>
+            </tr>
+            
+            
+  SAVE DU DETAIL AU CAS OU !          
+            
+            <?php
+include "db/db.php";
+
+//On teste si on a un ou plusieurs disques
+if (isset($_GET["id"]) && isset($_GET["name"])) {
+    $discs = findDiscs($_GET["id"]);
+
+    if (count($discs) <= 0) header('Location: 404.php');
+} else {
+    header('Location: 404.php');
+}
+
+
+include "partials/header.php";
+
+?>
+<div class="container">
+    <h1>Nous avons  <span class="text-primary"><?= count($discs) ?></span>  disques de <?= $_GET["name"]?></h1>
+<div class="row">
+    <?php
+    foreach ($discs as $disc) {
+    ?>
+        <div class="col-3 bg-primary text-white card m-2 p-0" style="width: 18rem;">
+            <div class="card-header"><?=$disc->disc_title?></div>
+            <img src="<?= "images/".$disc->disc_picture?>" class="card-img-top" alt="pochette" style="height: 18rem" >
+        </div>
+
+
+    <?php } ?>
+
+</div>
+
+</div>
+
+
+<?php
+include "partials/footer.php";
+?>
+ <?php foreach ($artist as $nom) : ?>
+
+
+
+
+
+
+SAVE DES NOM ARTIST AU CAS OU 
+
+$artist = artistind();
+<th>Nom</th>
+<?php foreach ($artist as $nom) : ?>
+ <td class=""><?= $nom->artist_name ?></td>
+   <?php endforeach; ?> 
+   
+  // 
+   if (isset($_GET["id"]) && isset($_GET["name"])) {
+    $discs = findDiscs($_GET["name"]);
+
+    if (count($discs) <= 0) header('Location: 404.php');
+} else {
+    header('Location: 404.php');
+}
+   
+   
+   save ajout artist 
+   
+           <label for="artist">Artiste :</label><br>
+        <select name="artist" id="artist">
+            <option id="Null">...</option>
+            <option id="6">AC/DC</option>
+            <option id="9">Fleshtones</option>
+            <option id="7">Marillion</option>
+            <option id="4">Queens of the Stone Age</option>
+            <option id="1">Neil Young</option>
+            <option id="5">Serge Gainsbourg</option>
+            <option id="10">The Clash</option>
+            <option id="2">YES</option>
+            <option id="8">Bob Dylan</option>
+            <option id="3">Rolling Stones</option>
+            </select>
+            <br><br>
+   
+   
+   
+FIN
