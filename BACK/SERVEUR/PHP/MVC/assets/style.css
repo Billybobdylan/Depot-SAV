@@ -2,10 +2,6 @@ html, body {
     height: 100%;
 }
 
-#titreReponses {
-    font-size : 100%;
-}
-
 body {
     color: #bfbfbf;
     background: black;
@@ -39,4 +35,8 @@ a:link {
 
 #titreBlog, #piedBlog {
     text-align: center;
+}
+
+#titreReponses {
+    font-size : 100%;
 }

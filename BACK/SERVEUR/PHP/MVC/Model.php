@@ -1,18 +1,10 @@
+
+
 <?php
-function getBdd()
-{
-    $bdd = new PDO("mysql:host=localhost;dbname=blig;charset=utf8",'dylan','mariadb5880',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 
-    return $bdd;
-}
-
-function getBillets()
-{
-    $bdd = getBdd();
-    $billets = $bdd->query('SELECT BIL_ID as id, BIL_DATE as date, BIL_TITRE as titre, BIL_CONTENU as contenu FROM T_BILLET order by BIL_ID desc');
-    return $billets;
-}
-
+/**
+ * @throws Exception
+ */
 function getBillet($idBillet){
     $bdd= getBdd();
     $billet=$bdd->prepare('SELECT BIL_ID as id, BIL_DATE as date, BIL_TITRE as titre, BIL_CONTENU as contenu FROM T_BILLET WHERE BIL_ID =?;');
@@ -26,6 +18,17 @@ function getBillet($idBillet){
     }
 }
 
+function getBillets()
+{
+    $bdd = getBdd();
+    return $bdd->query('SELECT BIL_ID as id, BIL_DATE as date, BIL_TITRE as titre, BIL_CONTENU as contenu FROM T_BILLET order by BIL_ID desc');
+}
+
+function getBdd(): PDO
+{
+    return new PDO("mysql:host=database:3306;dbname=boggy;charset=utf8", 'root', 'tiger',array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
+}
+
 function getComments($idBillet)
 {
     $bdd = getBdd();
@@ -33,6 +36,3 @@ function getComments($idBillet)
     $comments->execute(array($idBillet));
     return $comments;
 }
-
-
-?>

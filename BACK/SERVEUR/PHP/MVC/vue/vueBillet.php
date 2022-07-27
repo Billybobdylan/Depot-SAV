@@ -1,3 +1,4 @@
+
 <?php $titre = "Mon Blog - ".$billet['titre']; ?>
 
 <?php ob_start(); ?>
